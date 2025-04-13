@@ -184,25 +184,32 @@
                 <div class="main-card">
                   <h1 id="teks3" class="scale0 quicksand" style="font-size: 20px;">Try to Solve<br><i class="pink">this Memory Game first</i>! 😆</h1>
                   <div class="game-board">
-                    <div class="card" data-emoji="🫶"></div>
+                    
                     <div class="card" data-emoji="❤️"></div>
-                    <div class="card" data-emoji="🥳"></div>
+                    <div class="card" data-emoji="😘"></div>
                     <div class="card" data-emoji="💞"></div>
-                
+                    <div class="card" data-emoji="🫀"></div>
+
                     <div class="card" data-emoji="💐"></div>
                     <div class="card" data-emoji="😍"></div>
-                    <div class="card" data-emoji="🥰"></div>
-                    <div class="card" data-emoji="🩷"></div>
+                    <div class="card" data-emoji="💞"></div>
+                    <div class="card" data-emoji="🦖"></div>
+                    
                 
                     <div class="card" data-emoji="🫶"></div>
-                    <div class="card" data-emoji="💞"></div>
-                    <div class="card" data-emoji="💐"></div>
+                    <div class="card" data-emoji="🍼"></div>
                     <div class="card" data-emoji="🥰"></div>
+                    <div class="card" data-emoji="💐"></div>
                 
                     <div class="card" data-emoji="❤️"></div>
-                    <div class="card" data-emoji="🩷"></div>
-                    <div class="card" data-emoji="🥳"></div>
-                    <div class="card" data-emoji="😍"></div> <!--onclick="endGame()"-->
+                    <div class="card" data-emoji="😘"></div>
+                    <div class="card" data-emoji="🥰"></div>
+                    <div class="card" data-emoji="😍"></div> 
+                    
+                    <div class="card" data-emoji="🫀"></div>
+                    <div class="card" data-emoji="🫶"></div>
+                    <div class="card" data-emoji="🦖"></div>
+                    <div class="card" data-emoji="🍼"></div><!--onclick="endGame()"-->
                   </div>
                 </div>
                 
@@ -308,31 +315,35 @@ function katanimasi2() {
         deleteSpeed: 13, // deletion speed
         cursor: true
     })
-    .type('According to <b>biology</b>, you are<br> <b><span class="pink">7%</span> blood</b>~')
-    .pause(700) // pause 0.7 second after typing finishes
+    .type('According to <b>biology</b>, you are<br> <b><span class="pink">7%</span> blood</b>…')
+    .pause(700)
     .delete(78)
-    .pause(400) // pause before next text
-    .type('According to <b>chemistry</b>, you are<br> <b><span class="pink">70%</span> water</b>~')
+    .pause(400)
+    .type('According to <b>chemistry</b>, you are<br> <b><span class="pink">70%</span> water</b>…')
     .pause(700)
     .delete()
     .pause(400)
-    .type('According to <b>physics</b>, you are<br> <b><span class="pink">99%</span> empty space</b>~')
+    .type('According to <b>physics</b>, you are<br> <b><span class="pink">99%</span> empty space</b>…')
     .pause(700)
     .delete()
     .pause(400)
     .exec(() => {
-        teks4.style = "font-size:18px;font-weight:400;text-align:left;line-height:1.4em";
+    teks4.style = "font-size:18px;font-weight:400;text-align:left;line-height:1.4em";
     })
-    .type('But <b>in my opinion</b>, you are<br><b><span class="pink">1000%</span> my love</b> 🫣❤️')
+    .type('But <b>in my heart</b>, you are<br><b><span class="pink">1000%</span> my world</b> 🌍❤️')
+    .pause(700)
+    .delete()
+    .pause(400)
+    .type('Not just my love… <br> you’re my <b><span class="pink">reason to smile</span></b>, my <b>peace</b>, and my <b>forever person</b> 🥹✨')
     .exec(() => {
-        teks4.innerHTML = 'But <b>in my opinion</b>, you are<br><b><span class="pink">1000%</span> my love</b> 🫣❤️' + `<br><br><span id="teksLove"></span>`;
-        setTimeout(katanimasi3, 200);
+    teks4.innerHTML = 'Not just my love… <br> you’re my <b><span class="pink">reason to smile</span></b>, my <b>peace</b>, and my <b>forever person</b> 🥹✨' + `<br><br><span id="teksLove"></span>`;
+    setTimeout(katanimasi3, 200);
     })
     .go();
 }
 
 function katanimasi3(){
-    initeksAkhir = `ᯓᡣ𐭩<br><b>Dearest my love</b>,<br>the sweetest, funniest, most adorable<br><b>stay healthy, my dear 😍😋🩷</b>`;
+    initeksAkhir = `😫🫀✨<br><b>Dearest my love</b>,<br>the sweetest, funniest, most adorable<br><b>stay healthy, my dear love 😍😋🩷</b>`;
     new TypeIt("#teksLove", {
     strings: ["" + initeksAkhir], startDelay: 1, speed: 25, cursor: true,
     afterComplete: function(){
@@ -481,7 +492,7 @@ document.addEventListener('click', function() {
         secondCard.removeEventListener("click", flipCard);
 
         matchedPairs++;
-        if (matchedPairs === 8) {
+        if (matchedPairs === 10) {
           endGame();
         }
 
